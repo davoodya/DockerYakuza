@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y python3 pip iputils-ping && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy NetExec tools from attacker image
-COPY --from=attacker /usr/bin/ncx /usr/bin/ncx
+COPY --from=attacker /usr/bin/nxc /usr/bin/nxc
 COPY --from=attacker /usr/lib/python3.*/ /usr/lib/python3.*/  # adjust if needed
 
 # Copy attacker script
