@@ -3,7 +3,7 @@ FROM kalilinux/kali-rolling
 LABEL maintainer="DavoodSec@davoodya.ir"
 
 RUN echo 'Acquire::AllowInsecureRepositories "true";' > /etc/apt/apt.conf.d/99insecure
-RUN apt update && apt install -y nmap
+RUN apt update && apt install -y --allow-unauthenticated nmap
 
 COPY ./scan.sh /opt/scan.sh
 
