@@ -1,0 +1,4 @@
+services:
+  sylva:
+    container_name: sylva
+    image: 'sylva/sylva'
